@@ -1,0 +1,17 @@
+{% block header %}
+This is the default content
+{% endblock %}
+
+<h1>
+  Hello{% if username %}, {{ username }}{% endif %}!
+</h1>
+
+<section class="left">
+  {% block left %}{% endblock %}
+</section>
+
+<section class="right">
+  {% block right %}
+  This is more content
+  {% endblock %}
+</section>

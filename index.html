@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="no-js">
+  <head>
+    <title>Nunjucks Test</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    
+    <script type="text/javascript" src="https://mozilla.github.io/nunjucks/files/nunjucks.js"></script>
+    <script type="text/javascript" src="template/foo.js"></script>
+
+    <script>
+      var data = {
+        username: "Mavis"
+      };
+
+      nunjucks.render('template/foo.html', data, function(err, res) {
+        // console.log("res = ",res);
+        document.querySelector("#app").innerHTML = res;
+      });
+    </script>
+  </body>
+</html>
